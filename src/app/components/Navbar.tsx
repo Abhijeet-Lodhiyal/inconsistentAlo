@@ -12,9 +12,15 @@ export default function Navbar() {
 
   return (
     <nav className='relative'>
-      <div className='flex flex-row justify-between items-center m-4 p-8'>
+      <div className='container mx-auto flex justify-between items-center p-4'>
         <div className='text-4xl'>
           inconSistEntAlo
+        </div>
+        <div className='hidden md:flex space-x-4'>
+          <Link href="/" className="py-2 px-4 hover:text-gray-300">Home</Link>
+          <Link href="/blog" className="py-2 px-4 hover:text-gray-300">Blog</Link>
+          <Link href="/gallery" className="py-2 px-4 hover:text-gray-300">Gallery</Link>
+          <Link href="/about" className="py-2 px-4 hover:text-gray-300">About Me</Link>
         </div>
         <div className='md:hidden'>
           <button onClick={toggleMenu} className='focus:outline-none'>
@@ -24,15 +30,15 @@ export default function Navbar() {
           </button>
         </div>
       </div>
-      <div className={`fixed inset-x-0 top-0 z-50 bg-white shadow-md transition-transform duration-300 ease-in-out transform ${isOpen ? 'translate-y-0' : '-translate-y-full'} md:relative md:transform-none md:shadow-none md:bg-transparent`}>
-        <div className='flex justify-end p-4 md:hidden'>
+      <div className={`fixed inset-0 z-50 bg-white transition-opacity duration-300 ease-in-out ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'} md:hidden`}>
+        <div className='flex justify-end p-4'>
           <button onClick={toggleMenu} className='text-2xl focus:outline-none'>&times;</button>
         </div>
-        <ul className='md:flex md:space-x-4'>
-          <li><Link href="/" className="block py-2 px-4 text-blue-500 hover:text-blue-700">Home</Link></li>
-          <li><Link href="/blog" className="block py-2 px-4 text-green-500 hover:text-green-700">Blog</Link></li>
-          <li><Link href="/gallery" className="block py-2 px-4 text-purple-500 hover:text-purple-700">Gallery</Link></li>
-          <li><Link href="/about" className="block py-2 px-4 text-red-500 hover:text-red-700">About Me</Link></li>
+        <ul className='flex flex-col items-center justify-center h-full space-y-8'>
+          <li><Link href="/" className="text-2xl text-blue-500 hover:text-blue-700" onClick={toggleMenu}>Home</Link></li>
+          <li><Link href="/blog" className="text-2xl text-green-500 hover:text-green-700" onClick={toggleMenu}>Blog</Link></li>
+          <li><Link href="/gallery" className="text-2xl text-purple-500 hover:text-purple-700" onClick={toggleMenu}>Gallery</Link></li>
+          <li><Link href="/about" className="text-2xl text-red-500 hover:text-red-700" onClick={toggleMenu}>About Me</Link></li>
         </ul>
       </div>
     </nav>
