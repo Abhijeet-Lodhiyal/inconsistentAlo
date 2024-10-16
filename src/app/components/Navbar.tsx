@@ -35,10 +35,10 @@ export default function Navbar() {
           <button onClick={toggleMenu} className='text-2xl focus:outline-none'>&times;</button>
         </div>
         <ul className='flex flex-col items-center justify-center h-full space-y-8'>
-          <li><Link href="/" className="text-2xl text-blue-500 hover:text-blue-700" onClick={toggleMenu}>Home</Link></li>
-          <li><Link href="/blog" className="text-2xl text-green-500 hover:text-green-700" onClick={toggleMenu}>Blog</Link></li>
-          <li><Link href="/gallery" className="text-2xl text-purple-500 hover:text-purple-700" onClick={toggleMenu}>Gallery</Link></li>
-          <li><Link href="/about" className="text-2xl text-red-500 hover:text-red-700" onClick={toggleMenu}>About Me</Link></li>
+          <li><Link href="/" className="text-2xl text-gray-700 hover:text-gray-900" onClick={toggleMenu}>Home</Link></li>
+          <li><Link href="/blog" className="text-2xl text-gray-700 hover:text-gray-900" onClick={toggleMenu}>Blog</Link></li>
+          <li><Link href="/gallery" className="text-2xl text-gray-700 hover:text-gray-900" onClick={toggleMenu}>Gallery</Link></li>
+          <li><Link href="/about" className="text-2xl text-gray-700 hover:text-gray-900" onClick={toggleMenu}>About Me</Link></li>
         </ul>
       </div>
     </nav>
