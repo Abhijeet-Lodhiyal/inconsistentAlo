@@ -1,4 +1,6 @@
 // src/app/components/BlogPost.tsx
+'use client';
+
 interface BlogPostProps {
     title: string;
     image: string;

@@ -2,17 +2,20 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+  const isHomePage = pathname === '/';
 
   return (
-    <nav className='relative'>
-      <div className='container mx-auto flex justify-between items-center p-4'>
+    <nav className={`${isHomePage ? 'fixed' : 'relative'} top-0 left-0 right-0 z-50 ${isHomePage ? 'bg-transparent' : 'bg-white'}`}>
+      <div className={`container mx-auto flex justify-between items-center p-4 ${isHomePage ? 'text-white' : 'text-black'}`}>
         <div className='text-4xl'>
           inconSistEntAlo
         </div>

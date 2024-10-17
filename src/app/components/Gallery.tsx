@@ -1,9 +1,11 @@
 // src/app/components/Gallery.tsx
+'use client';
+
 export default function Gallery() {
     const images = [
-      '/images/photo1.jpg',
-      '/images/photo2.jpg',
-      '/images/photo3.jpg',
+      '/images/pc.jpeg',
+      '/images/mobile.jpg',
+      '/images/mobile.jpg',
     ];
   
     return (
